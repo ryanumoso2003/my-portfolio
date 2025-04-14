@@ -8,6 +8,7 @@ document.querySelectorAll(".toggle-btn").forEach((button) => {
       button.textContent = isVisible ? "Show Details" : "Hide Details";
     });
   });
+<<<<<<< HEAD
 
 // Contact form validation
 document.getElementById("contact-form").addEventListener("submit", function (e) {
@@ -32,4 +33,6 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
       this.reset();
     }
   });
+=======
+>>>>>>> f941fe5118def93be0fa909082e4d739807bcb5e
   
