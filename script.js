@@ -66,3 +66,45 @@ if ("geolocation" in navigator) {
       "Geolocation not supported on your browser";
   }
   
+  document.addEventListener("DOMContentLoaded", () => {
+    const canvas = document.getElementById("skillsCanvas");
+    if (!canvas) return;
+  
+    const ctx = canvas.getContext("2d");
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  
+    const dots = [];
+  
+    for (let i = 0; i < 40; i++) {
+      dots.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: 3 + Math.random() * 3,
+        dx: -1 + Math.random() * 2,
+        dy: -1 + Math.random() * 2,
+        color: `hsl(${Math.random() * 360}, 70%, 60%)`
+      });
+    }
+  
+    function drawDots() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let dot of dots) {
+        ctx.beginPath();
+        ctx.arc(dot.x, dot.y, dot.radius, 0, Math.PI * 2);
+        ctx.fillStyle = dot.color;
+        ctx.fill();
+  
+        dot.x += dot.dx;
+        dot.y += dot.dy;
+  
+        // bounce off edges
+        if (dot.x <= 0 || dot.x >= canvas.width) dot.dx *= -1;
+        if (dot.y <= 0 || dot.y >= canvas.height) dot.dy *= -1;
+      }
+      requestAnimationFrame(drawDots);
+    }
+  
+    drawDots();
+  });
+  
