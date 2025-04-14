@@ -8,7 +8,6 @@ document.querySelectorAll(".toggle-btn").forEach((button) => {
       button.textContent = isVisible ? "Show Details" : "Hide Details";
     });
   });
-<<<<<<< HEAD
 
 // Contact form validation
 document.getElementById("contact-form").addEventListener("submit", function (e) {
@@ -33,6 +32,13 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
       this.reset();
     }
   });
-=======
->>>>>>> f941fe5118def93be0fa909082e4d739807bcb5e
+  
+  // Typed.js animation
+new Typed("#typed-text", {
+    strings: ["Hi, I’m Ryan.", "Web Developer.", "Student.", "Problem Solver."],
+    typeSpeed: 60,
+    backSpeed: 30,
+    backDelay: 1000,
+    loop: true,
+  });
   
