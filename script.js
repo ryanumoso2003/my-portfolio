@@ -42,3 +42,27 @@ new Typed("#typed-text", {
     loop: true,
   });
   
+  // Dark Mode Toggle
+const toggleBtn = document.getElementById("toggle-dark");
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+
+// Geolocation API
+if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+        document.getElementById("location-info").textContent =
+          `Thanks for visiting from around Latitude ${latitude.toFixed(2)}, Longitude ${longitude.toFixed(2)} 🌎`;
+      },
+      (error) => {
+        document.getElementById("location-info").textContent =
+          "Location not available";
+      }
+    );
+  } else {
+    document.getElementById("location-info").textContent =
+      "Geolocation not supported on your browser";
+  }
+  

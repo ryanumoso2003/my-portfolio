@@ -10,6 +10,7 @@
   <body>
     <!-- Header Section -->
     <header>
+        <button id="toggle-dark" style="margin-top: 10px;">🌙 Toggle Dark Mode</button>
         <p><span id="typed-text"></span></p>
       <h1>Ryan Umoso</h1>
       <nav>
@@ -119,49 +120,49 @@
       
 </section>
 
-
     <!-- Contact Section -->
-    <section id="contact" style="padding-bottom: 100px;">
-        <h2>Contact Me</h2>
-        <form id="contact-form" style="max-width: 500px; margin-left: 0; display: flex; flex-direction: column; gap: 15px;">
-          <label for="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Your name"
-            style="padding: 10px; font-size: 16px; width: 100%;"
-          />
-      
-          <label for="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="you@example.com"
-            style="padding: 10px; font-size: 16px; width: 100%;"
-          />
-      
-          <label for="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            placeholder="Write your message here..."
-            style="padding: 10px; font-size: 16px; width: 100%; resize: vertical;"
-          ></textarea>
-      
-          <button
-            type="submit"
-            style="padding: 10px; font-size: 16px; background-color: black; color: white; cursor: pointer;"
-          >
-            Send Message
-          </button>
-        </form>
-      
-        <div id="form-error" style="color: red; margin-top: 10px;"></div>
-      </section>
-      
+<section id="contact" style="padding-bottom: 100px;">
+    <h2>Contact Me</h2>
+    <form id="contact-form" style="max-width: 500px; margin-left: 0; display: flex; flex-direction: column; gap: 15px;">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your name"
+        style="padding: 10px; font-size: 16px; width: 100%;"
+      />
+  
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="you@example.com"
+        style="padding: 10px; font-size: 16px; width: 100%;"
+      />
+  
+      <label for="message">Message:</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        placeholder="Write your message here..."
+        style="padding: 10px; font-size: 16px; width: 100%; resize: vertical;"
+      ></textarea>
+  
+      <button
+        type="submit"
+        style="padding: 10px; font-size: 16px; background-color: black; color: white; cursor: pointer;"
+      >
+        Send Message
+      </button>
+    </form>
+  
+    <div id="form-error" style="color: red; margin-top: 10px;"></div>
+    <p id="location-info" style="margin-top: 15px; font-style: italic;"></p>
+  </section>
+  
 
     <!-- Footer Section -->
     <footer>
