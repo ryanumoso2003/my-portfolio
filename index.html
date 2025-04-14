@@ -1,46 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="css/styles.css">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>My Portfolio</title>
-</head>
-<script src="script.js" defer></script>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
     <!-- Header Section -->
     <header>
-        <h1>Ryan Umoso</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <h1>Ryan Umoso</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- About Section -->
     <section id="about">
-        <h2>About Me</h2>
-        <p>This is where you’ll write a short bio about yourself. Who are you? What are your interests? What have you done so far in your journey?</p>
+      <h2>About Me</h2>
+      <p>This is where you’ll write a short bio about yourself. Who are you? What are your interests? What have you done so far in your journey?</p>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2>My Projects</h2>
-        <p>This is a placeholder for your projects. In future chapters, you’ll add real projects here.</p>
+      <h2>My Projects</h2>
+
+      <!-- Project 1 -->
+      <div class="project">
+        <h3>Humber Study Connect</h3>
+        <button class="toggle-btn">Show Details</button>
+        <div class="project-details" style="display: none;">
+          <p>This is a full-stack web app I’m currently developing with a teammate for class. It helps Humber students connect and collaborate with login authentication and responsive UI.</p>
+          <ul>
+            <li>Login/Registration flow</li>
+            <li>Error handling and password validation</li>
+            <li>Tailwind CSS interface</li>
+          </ul>
+          <p><strong>GitHub:</strong> <a href="https://github.com/PPableo/Humber-Study-Connect" target="_blank">View Repository</a></p>
+          <img src="project1.png" alt="Sign in page" style="max-width: 100%; margin-bottom: 10px;">
+          <img src="project2.png" alt="Register page" style="max-width: 100%; margin-bottom: 10px;">
+          <img src="project3.png" alt="Filled register form" style="max-width: 100%; margin-bottom: 10px;">
+          <img src="project4.png" alt="Registration success" style="max-width: 100%;">
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project">
+        <h3>Canadian Tourist Location Task List</h3>
+        <button class="toggle-btn">Show Details</button>
+        <div class="project-details" style="display: none;">
+          <p>This project is for class and focuses on managing a task list of Canadian tourist destinations. It includes province filtering and responsive design.</p>
+          <ul>
+            <li>Task list interface with location highlights</li>
+            <li>Interactive navigation</li>
+            <li>Simple and scenic layout</li>
+          </ul>
+          <p><strong>GitHub:</strong> <a href="https://github.com/ManyManicAmbitions/Canadian-Tourist-Location-Task-List" target="_blank">View Repository</a></p>
+          <img src="canada_project1.png" alt="Task list UI" style="max-width: 100%; margin-bottom: 10px;">
+          <img src="canada_project2.png" alt="Scenic preview" style="max-width: 100%;">
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" style="padding-bottom: 100px;">
         <h2>Contact Me</h2>
-        <p>In the future, this will be a contact form. For now, just leave this as a placeholder.</p>
-    </section>
+        <form id="contact-form" style="max-width: 500px; margin-left: 0; display: flex; flex-direction: column; gap: 15px;">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            style="padding: 10px; font-size: 16px; width: 100%;"
+          />
+      
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            style="padding: 10px; font-size: 16px; width: 100%;"
+          />
+      
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Write your message here..."
+            style="padding: 10px; font-size: 16px; width: 100%; resize: vertical;"
+          ></textarea>
+      
+          <button
+            type="submit"
+            style="padding: 10px; font-size: 16px; background-color: black; color: white; cursor: pointer;"
+          >
+            Send Message
+          </button>
+        </form>
+      
+        <div id="form-error" style="color: red; margin-top: 10px;"></div>
+      </section>
+      
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Ryan Umoso</p>
+      <p>&copy; 2025 Ryan Umoso</p>
     </footer>
-</body>
+  </body>
 </html>
